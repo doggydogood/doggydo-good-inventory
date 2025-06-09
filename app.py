@@ -50,12 +50,10 @@ if sales_file:
         total_revenue = dashboard_df['Total Revenue'].sum()
         message = {
             "text": (
-                f"*Doggy Do Good Weekly Summary:*
-"
-                f"Top ASIN: `{top_asin}`
-"
-                f"Total Revenue: ${total_revenue:,.2f}"
-            )
+    f"*Doggy Do Good Weekly Summary:*\n"
+    f"Top ASIN: `{top_asin}`\n"
+    f"Total Revenue: ${total_revenue:,.2f}"
+)
         }
         if webhook_url:
             response = requests.post(webhook_url, json=message)
